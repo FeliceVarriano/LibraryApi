@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>XUnit Testcase Template Theory with InlineData Attribute</Title>
+			<Author>Felice Varriano</Author>
+			<Description>Quickly adds a template for an XUnit test case method using the InlineData attribute</Description>
+			<Shortcut>xutid</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[
+				/// <summary>
+				/// 
+				/// </summary>
+				/// <param name=""></param>
+				[Theory]
+				[InlineData()]
+                public void $MethodName$()
+                {
+                    // Arrange
+                    
+
+                    // Act
+                   
+
+                    // Assert
+                    
+                }
+				]]>
+			</Code>
+			<Declarations>
+				<Literal>
+					<ID>MethodName</ID>
+					<ToolTip>Name of the test method</ToolTip>
+					<Default>XUnitTest</Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

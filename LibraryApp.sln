@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29230.47
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.API", "Library.API\Library.API.csproj", "{BC24DB71-FA58-465C-B127-D2EF0A4E02C4}"
 EndProject
@@ -14,6 +14,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApp", "LibraryApp\LibraryApp.csproj", "{6F716174-2A51-42CD-A7B8-6539060E962C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApp.Test", "LibraryApp.Test\LibraryApp.Test.csproj", "{45A2B678-5438-4BD6-91FB-C778ECED04AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{082806A8-350E-4A6C-A620-D2E7B360E635}"
+	ProjectSection(SolutionItems) = preProject
+		xunit-testcase-template-fact.snippet = xunit-testcase-template-fact.snippet
+		xunit-testcase-template-theory-classdata.snippet = xunit-testcase-template-theory-classdata.snippet
+		xunit-testcase-template-theory-inlinedata.snippet = xunit-testcase-template-theory-inlinedata.snippet
+		xunit-testcase-template-theory-memberdata.snippet = xunit-testcase-template-theory-memberdata.snippet
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

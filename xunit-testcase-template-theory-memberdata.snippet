@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>XUnit Testcase Template Theory with ClassData Attribute</Title>
+			<Author>Felice Varriano</Author>
+			<Description>Quickly adds a template for an XUnit test case method using the MemberData attribute</Description>
+			<Shortcut>xutmd</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[
+				/// <summary>
+				/// 
+				/// </summary>
+				/// <param name=""></param>
+				[Theory]
+				[MemberData(nameof($Data$), MemberType = typeof($Class$)))]
+                public void $MethodName$()
+                {
+                    // Arrange
+                    
+
+                    // Act
+                   
+
+                    // Assert
+                    
+                }
+				]]>
+			</Code>
+			<Declarations>
+				<Literal>
+					<ID>MethodName</ID>
+					<ToolTip>Name of the test method</ToolTip>
+					<Default>XUnitTest</Default>
+				</Literal>
+				<Literal>
+					<ID>Data</ID>
+					<ToolTip>The static object containing the data</ToolTip>
+					<Default>StaticData</Default>
+				</Literal>
+				<Literal>
+					<ID>Class</ID>
+					<ToolTip>The type of the static data</ToolTip>
+					<Default>StaticClass</Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
