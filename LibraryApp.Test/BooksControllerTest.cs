@@ -13,6 +13,9 @@ namespace LibraryApp.Test
 {
     public class BooksControllerTest
     {
+        /// <summary>
+        /// Test retrieving all books from the service.
+        /// </summary>
         [Fact]
         public void IndexUnitTest()
         {
@@ -31,6 +34,11 @@ namespace LibraryApp.Test
 
         }
 
+        /// <summary>
+        /// Test that details are retrieved from a specified book
+        /// </summary>
+        /// <param name="id">GUID of the specified book</param>
+        /// <param name="incorrectGuid">Control group of an incorrect GUID which should not return anything.</param>
         [Theory]
         [InlineData("ab2bd817-98cd-4cf3-a80a-53ea0cd9c200", "ab2bd817-98cd-4cf3-a80a-53ea0cd9c123")]
         public void DetailsUnitTest(string id, string incorrectGuid)
@@ -63,6 +71,9 @@ namespace LibraryApp.Test
             Assert.IsType<NotFoundResult>(notFoundResult);
         }
 
+        /// <summary>
+        /// Test creating a new book and adding it to the service
+        /// </summary>
         [Fact]
         public void CreateTest()
         {
@@ -99,6 +110,10 @@ namespace LibraryApp.Test
             Assert.IsType<SerializableError>(badRequestResult.Value);
         }
 
+        /// <summary>
+        /// Test deleting a book from the service and ensuring the count is updated.
+        /// </summary>
+        /// <param name="validGuid"></param>
         [Theory]
         [InlineData("ab2bd817-98cd-4cf3-a80a-53ea0cd9c200")]
         public void DeleteTest(string validGuid)

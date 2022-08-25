@@ -20,6 +20,9 @@ namespace LibraryAPI.Test
             _controller = new BooksController(_service);
         }
 
+        /// <summary>
+        /// Retrieve all the books from the Library
+        /// </summary>
         [Fact]
         public void GetAllTest()
         {
@@ -36,6 +39,11 @@ namespace LibraryAPI.Test
             Assert.Equal(5, listBooks.Count);
         }
 
+        /// <summary>
+        /// Test retrieving a book via ID
+        /// </summary>
+        /// <param name="id">GUID for the specified book</param>
+        /// <param name="guid2">Incorrect GUID to ensure nothing is returned (Control Group)</param>
         [Theory]
         [InlineData("ab2bd817-98cd-4cf3-a80a-53ea0cd9c200", "ab2bd817-98cd-4cf3-a80a-53ea0cd9c269")]
         public void GetBooksByIdTest(string id, string guid2)
@@ -59,6 +67,9 @@ namespace LibraryAPI.Test
             Assert.Equal("Managing Oneself", bookItem.Title);
         }
 
+        /// <summary>
+        /// Add a new book to the collection.
+        /// </summary>
         [Fact]
         public void AddBookTest()
         {
@@ -96,6 +107,11 @@ namespace LibraryAPI.Test
             Assert.IsType<BadRequestObjectResult>(badResponse);           
         }
 
+        /// <summary>
+        /// Test deleting a book via GUID from the collection.
+        /// </summary>
+        /// <param name="id">Correct GUID</param>
+        /// <param name="guid2">Incorrect GUID</param>
         [Theory]
         [InlineData("ab2bd817-98cd-4cf3-a80a-53ea0cd9c200", "ab2bd817-98cd-4cf3-a80a-53ea0cd9c269")]
         public void RemoveBookByIdTest(string id, string guid2)
